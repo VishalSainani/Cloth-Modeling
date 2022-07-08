@@ -1,0 +1,11 @@
+Model Information:
+* title:	Male Body
+* source:	https://sketchfab.com/3d-models/male-body-15a422001834483c9750ce6117d59cc1
+* author:	Alexander Antipov (https://sketchfab.com/Dessen)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Male Body" (https://sketchfab.com/3d-models/male-body-15a422001834483c9750ce6117d59cc1) by Alexander Antipov (https://sketchfab.com/Dessen) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

@@ -5,7 +5,7 @@ import * as dat from 'dat.gui'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js'
 import { OBJLoader } from 'three/examples/jsm/loaders/OBJLoader.js'
 import { DRACOLoader } from 'three/examples/jsm/loaders/DRACOLoader.js'
-import { CurvePath, WireframeGeometry } from 'three'
+import { CurvePath, log, WireframeGeometry } from 'three'
 
 /**
  * Base
@@ -13,8 +13,10 @@ import { CurvePath, WireframeGeometry } from 'three'
 // Debug
 const gui = new dat.GUI()
 var index = {
-    value: 0
+    value: 0,
+    name: ''
 }
+
 // Canvas
 const canvas = document.querySelector('canvas.webgl')
 
@@ -360,6 +362,33 @@ gltfLoader.load(
 
         var positionX, positionY, positionZ;
         var scaleZ, scaleY, scaleX;
+        if (index.name == 'umer') {
+            clothes[0].position.setX(0.02095)
+            clothes[0].position.setY(0)
+            clothes[0].position.setZ(-0.0572)
+
+            clothes[0].scale.setX(1.0266)
+            clothes[0].scale.setY(1)
+            clothes[0].scale.setZ(1.5035)
+        }
+        else if (index.name == 'vishal') {
+            clothes[0].position.setX(0)
+            clothes[0].position.setY(0.0295)
+            clothes[0].position.setZ(-0.1006)
+
+            clothes[0].scale.setX(1.1566)
+            clothes[0].scale.setY(1)
+            clothes[0].scale.setZ(1.1566)
+        }
+        else if (index.name == 'hassan') {
+            clothes[0].position.setX(0.0295)
+            clothes[0].position.setY(0)
+            clothes[0].position.setZ(-0.082)
+
+            clothes[0].scale.setX(1.3734)
+            clothes[0].scale.setY(1)
+            clothes[0].scale.setZ(1.3)
+        }
 
         scene.add(clothes[0])
 
@@ -403,6 +432,34 @@ gltfLoader.load(
             scaleZ = gui.add(clothes[index.value].scale, "z", -2, 2, 0.0001).name("shirt z Cloth set")
             scaleY = gui.add(clothes[index.value].scale, "y", -2, 2, 0.0001).name("shirt y Cloth set")
             scaleX = gui.add(clothes[index.value].scale, "x", -2, 2, 0.0001).name("shirt x Cloth set")
+            if (index.name == 'umer') {
+
+                clothes[index.value].position.setX(0.02095)
+                clothes[index.value].position.setY(0)
+                clothes[index.value].position.setZ(-0.0572)
+
+                clothes[index.value].scale.setX(1.0266)
+                clothes[index.value].scale.setY(1)
+                clothes[index.value].scale.setZ(1.5035)
+            }
+            else if (index.name == 'vishal') {
+                clothes[index.value].position.setX(0)
+                clothes[index.value].position.setY(0.0295)
+                clothes[index.value].position.setZ(-0.1006)
+
+                clothes[index.value].scale.setX(1.1566)
+                clothes[index.value].scale.setY(1)
+                clothes[index.value].scale.setZ(1.1566)
+            }
+            else if (index.name == 'hassan') {
+                clothes[index.value].position.setX(0.0295)
+                clothes[index.value].position.setY(0)
+                clothes[index.value].position.setZ(-0.082)
+
+                clothes[index.value].scale.setX(1.3734)
+                clothes[index.value].scale.setY(1)
+                clothes[index.value].scale.setZ(1.3)
+            }
 
 
         });
@@ -446,12 +503,13 @@ var example = new THREE.Object3D();
 // resource URL
 objLoader.setPath('/models/male_body/')
 // objLoader.setPath("./../../../Downloads")
-
+var pathObj = 'hassan_result__img_256.obj';
 objLoader.load(
     // 'scene1.obj', //Vishal's Model
     // 'hassan_model.obj', //Hassan's Model
-    'result__img_256.obj',
     // called when resource is loaded
+    pathObj,
+
     function (obj) {
         obj.traverse(function (child) {
             if (child instanceof THREE.Mesh) {
@@ -460,7 +518,23 @@ objLoader.load(
         })
         // var model = obj.scene;
         console.log("TO JSON", obj.toJSON(obj.scene));
+        if (pathObj.includes("umer")) {
+            console.log("Umer khan")
+            index.name = 'umer'
+            obj.scale.setZ(0.0463)
+        }
+        else if (pathObj.includes("vishal")) {
+            console.log("Vishal Shb")
+            index.name = 'vishal'
+            obj.scale.setZ(0.766)
 
+        }
+        else if (pathObj.includes("hassan")) {
+            console.log("Hassan Shb")
+            index.name = 'hassan'
+            obj.scale.setZ(0.68)
+
+        }
         // obj.position.x -= 50;
         // example.scale.set(0.009, 0.0095, 0.005);
         // // model.scale.set(0.009, 0.0095, 0.005)

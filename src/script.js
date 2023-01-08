@@ -77,6 +77,38 @@ objLoader.load(
         console.error(error);
     }
 );
+
+
+objLoader.load(
+    "/models/female_cloth/female_dress.obj",
+    (object) => {
+        // object.position.setX(-0.78)
+        // object.position.setY(1.65)
+        // object.position.setZ(-10.490)
+
+        // object.scale.setX(-0.1873)
+        // object.scale.setY(0.0728)
+        // object.scale.setZ(0.0253)
+        // Add the loaded object to the scene
+        var positionX = gui.add(object.position, "x", -2, 2, 0.0001).name("female shirt x1 position")
+        var positionY = gui.add(object.position, "y", -2, 2, 0.0001).name("female shirt y1 position")
+        var positionZ = gui.add(object.position, "z", -2, 2, 0.0001).name("female shirt z1 position")
+
+        var scaleX = gui.add(object.scale, "x", -2, 2, 0.0001).name("female shirt x1 Cloth set")
+        var scaleY = gui.add(object.scale, "y", -2, 2, 0.0001).name("female shirt y1 Cloth set")
+        var scaleZ = gui.add(object.scale, "z", -2, 2, 0.0001).name("female shirt z1 Cloth set")
+
+        scene.add(object);
+    },
+    (progress) => {
+        // This function is called while the model is loading
+        console.log(`Loading model: ${(progress.loaded / progress.total * 100)}%`);
+    },
+    (error) => {
+        // This function is called if an error occurs while loading the model
+        console.error(error);
+    }
+);
 // Model loading
 
 gltfLoader.load(

@@ -10,20 +10,575 @@ import {
 
 var pants = []
 const pantObjLoader = new OBJLoader()
-
 pantObjLoader.setPath('/models/Pant/')
 
 pantObjLoader.load(
     "pant.obj",
     function (obj) {
         // var model = obj.scene;
-        obj.scale.setZ(0.01)
-        obj.scale.setY(0.01)
-        obj.scale.setX(0.01)
+        obj.position.setX(0)
+        obj.position.setY(0)
+        obj.position.setZ(0)
+
+        obj.scale.setX(0.0166)
+        obj.scale.setY(0.0123)
+        obj.scale.setZ(0.0253)
+
         obj.traverse(function (child) {   // aka setTexture
             if (child instanceof THREE.Mesh) {
-                // child.material.map = roughnessTexture;
-                // child.material.color.set('gray')
+                const Pmaterial = new THREE.MeshBasicMaterial({ map: minecraft });
+                child.material = Pmaterial;
+                //         // child.material.color.set('gray')
+            }
+        });
+
+        pants.push(obj)
+    }
+);
+
+//
+
+pantObjLoader.load(
+    "pant.obj",
+    function (obj) {
+        // var model = obj.scene;
+        obj.position.setX(0)
+        obj.position.setY(0)
+        obj.position.setZ(0)
+
+        obj.scale.setX(0.0166)
+        obj.scale.setY(0.0123)
+        obj.scale.setZ(0.0253)
+
+        obj.traverse(function (child) {   // aka setTexture
+            if (child instanceof THREE.Mesh) {
+                const Pmaterial = new THREE.MeshBasicMaterial({ map: check10 });
+                child.material = Pmaterial;
+                //         // child.material.color.set('gray')
+            }
+        });
+
+        pants.push(obj)
+    }
+);
+
+//
+
+pantObjLoader.load(
+    "pant.obj",
+    function (obj) {
+        // var model = obj.scene;
+        obj.position.setX(0)
+        obj.position.setY(0)
+        obj.position.setZ(0)
+
+        obj.scale.setX(0.0166)
+        obj.scale.setY(0.0123)
+        obj.scale.setZ(0.0253)
+
+        obj.traverse(function (child) {   // aka setTexture
+            if (child instanceof THREE.Mesh) {
+                const Pmaterial = new THREE.MeshBasicMaterial({ map: check22 });
+                child.material = Pmaterial;
+                //         // child.material.color.set('gray')
+            }
+        });
+
+        pants.push(obj)
+    }
+);
+
+//
+
+pantObjLoader.load(
+    "pant.obj",
+    function (obj) {
+        // var model = obj.scene;
+        obj.position.setX(0)
+        obj.position.setY(0)
+        obj.position.setZ(0)
+
+        obj.scale.setX(0.0166)
+        obj.scale.setY(0.0123)
+        obj.scale.setZ(0.0253)
+
+        obj.traverse(function (child) {   // aka setTexture
+            if (child instanceof THREE.Mesh) {
+                const Pmaterial = new THREE.MeshBasicMaterial({ map: alphaTexture });
+                child.material = Pmaterial;
+                //         // child.material.color.set('gray')
+            }
+        });
+
+        pants.push(obj)
+    }
+);
+
+//
+
+pantObjLoader.load(
+    "pant.obj",
+    function (obj) {
+        // var model = obj.scene;
+        obj.position.setX(0)
+        obj.position.setY(0)
+        obj.position.setZ(0)
+
+        obj.scale.setX(0.0166)
+        obj.scale.setY(0.0123)
+        obj.scale.setZ(0.0253)
+
+        obj.traverse(function (child) {   // aka setTexture
+            if (child instanceof THREE.Mesh) {
+                const Pmaterial = new THREE.MeshBasicMaterial({ map: heightTexture });
+                child.material = Pmaterial;
+                //         // child.material.color.set('gray')
+            }
+        });
+
+        pants.push(obj)
+    }
+);
+
+//
+
+pantObjLoader.load(
+    "pant.obj",
+    function (obj) {
+        // var model = obj.scene;
+        obj.position.setX(0)
+        obj.position.setY(0)
+        obj.position.setZ(0)
+
+        obj.scale.setX(0.0166)
+        obj.scale.setY(0.0123)
+        obj.scale.setZ(0.0253)
+
+        obj.traverse(function (child) {   // aka setTexture
+            if (child instanceof THREE.Mesh) {
+                const Pmaterial = new THREE.MeshBasicMaterial({ map: normalTexture });
+                child.material = Pmaterial;
+                //         // child.material.color.set('gray')
+            }
+        });
+
+        pants.push(obj)
+    }
+);
+
+//
+
+pantObjLoader.load(
+    "pant.obj",
+    function (obj) {
+        // var model = obj.scene;
+        obj.position.setX(0)
+        obj.position.setY(0)
+        obj.position.setZ(0)
+
+        obj.scale.setX(0.0166)
+        obj.scale.setY(0.0123)
+        obj.scale.setZ(0.0253)
+
+        obj.traverse(function (child) {   // aka setTexture
+            if (child instanceof THREE.Mesh) {
+                const Pmaterial = new THREE.MeshBasicMaterial({ map: ambientOcclusionTexture });
+                child.material = Pmaterial;
+                //         // child.material.color.set('gray')
+            }
+        });
+
+        pants.push(obj)
+    }
+);
+
+//
+
+pantObjLoader.load(
+    "pant.obj",
+    function (obj) {
+        // var model = obj.scene;
+        obj.position.setX(0)
+        obj.position.setY(0)
+        obj.position.setZ(0)
+
+        obj.scale.setX(0.0166)
+        obj.scale.setY(0.0123)
+        obj.scale.setZ(0.0253)
+
+        obj.traverse(function (child) {   // aka setTexture
+            if (child instanceof THREE.Mesh) {
+                const Pmaterial = new THREE.MeshBasicMaterial({ map: metalnessTexture });
+                child.material = Pmaterial;
+                //         // child.material.color.set('gray')
+            }
+        });
+
+        pants.push(obj)
+    }
+);
+
+//
+
+pantObjLoader.load(
+    "pant.obj",
+    function (obj) {
+        // var model = obj.scene;
+        obj.position.setX(0)
+        obj.position.setY(0)
+        obj.position.setZ(0)
+
+        obj.scale.setX(0.0166)
+        obj.scale.setY(0.0123)
+        obj.scale.setZ(0.0253)
+
+        obj.traverse(function (child) {   // aka setTexture
+            if (child instanceof THREE.Mesh) {
+                const Pmaterial = new THREE.MeshBasicMaterial({ map: roughnessTexture });
+                child.material = Pmaterial;
+                //         // child.material.color.set('gray')
+            }
+        });
+
+        pants.push(obj)
+    }
+);
+
+//
+
+pantObjLoader.load(
+    "pant.obj",
+    function (obj) {
+        // var model = obj.scene;
+        obj.position.setX(0)
+        obj.position.setY(0)
+        obj.position.setZ(0)
+
+        obj.scale.setX(0.0166)
+        obj.scale.setY(0.0123)
+        obj.scale.setZ(0.0253)
+
+
+        obj.traverse(function (child) {   // aka setTexture
+            if (child instanceof THREE.Mesh) {
+                const Pmaterial = new THREE.MeshBasicMaterial({ map: colorTexture });
+                child.material = Pmaterial;
+                //         // child.material.color.set('gray')
+            }
+        });
+
+        pants.push(obj)
+    }
+);
+
+//
+// 
+pantObjLoader.load(
+    "pant.obj",
+    function (obj) {
+        // var model = obj.scene;
+        obj.position.setX(0)
+        obj.position.setY(0)
+        obj.position.setZ(0)
+
+        obj.scale.setX(0.0166)
+        obj.scale.setY(0.0123)
+        obj.scale.setZ(0.0253)
+
+
+        obj.traverse(function (child) {   // aka setTexture
+            if (child instanceof THREE.Mesh) {
+                const Pmaterial = new THREE.MeshBasicMaterial({ map: skinTexture });
+                child.material = Pmaterial;
+                //         // child.material.color.set('gray')
+            }
+        });
+
+        pants.push(obj)
+    }
+);
+// Shorts
+pantObjLoader.load(
+    "pant.obj",
+    function (obj) {
+        // var model = obj.scene;
+        obj.position.setX(0)
+        obj.position.setY(0.50635)
+        obj.position.setZ(0)
+
+        obj.scale.setX(0.0166)
+        obj.scale.setY(0.006)
+        obj.scale.setZ(0.0253)
+
+        // obj.scale.setZ()
+        // obj.scale.setY(0.01)
+        // obj.scale.setX(0.01)
+        obj.traverse(function (child) {   // aka setTexture
+            if (child instanceof THREE.Mesh) {
+                const Pmaterial = new THREE.MeshBasicMaterial({ map: minecraft });
+                child.material = Pmaterial;
+                //         // child.material.color.set('gray')
+            }
+        });
+
+        pants.push(obj)
+    }
+);
+pantObjLoader.load(
+    "pant.obj",
+    function (obj) {
+        // var model = obj.scene;
+        obj.position.setX(0)
+        obj.position.setY(0.50635)
+        obj.position.setZ(0)
+
+        obj.scale.setX(0.0166)
+        obj.scale.setY(0.006)
+        obj.scale.setZ(0.0253)
+
+        // obj.scale.setZ()
+        // obj.scale.setY(0.01)
+        // obj.scale.setX(0.01)
+        obj.traverse(function (child) {   // aka setTexture
+            if (child instanceof THREE.Mesh) {
+                const Pmaterial = new THREE.MeshBasicMaterial({ map: metalnessTexture });
+                child.material = Pmaterial;
+                //         // child.material.color.set('gray')
+            }
+        });
+
+        pants.push(obj)
+    }
+);
+pantObjLoader.load(
+    "pant.obj",
+    function (obj) {
+        // var model = obj.scene;
+        obj.position.setX(0)
+        obj.position.setY(0.50635)
+        obj.position.setZ(0)
+
+        obj.scale.setX(0.0166)
+        obj.scale.setY(0.006)
+        obj.scale.setZ(0.0253)
+
+        // obj.scale.setZ()
+        // obj.scale.setY(0.01)
+        // obj.scale.setX(0.01)
+        obj.traverse(function (child) {   // aka setTexture
+            if (child instanceof THREE.Mesh) {
+                const Pmaterial = new THREE.MeshBasicMaterial({ map: check10 });
+                child.material = Pmaterial;
+                //         // child.material.color.set('gray')
+            }
+        });
+
+        pants.push(obj)
+    }
+);
+pantObjLoader.load(
+    "pant.obj",
+    function (obj) {
+        // var model = obj.scene;
+        obj.position.setX(0)
+        obj.position.setY(0.50635)
+        obj.position.setZ(0)
+
+        obj.scale.setX(0.0166)
+        obj.scale.setY(0.006)
+        obj.scale.setZ(0.0253)
+
+        // obj.scale.setZ()
+        // obj.scale.setY(0.01)
+        // obj.scale.setX(0.01)
+        obj.traverse(function (child) {   // aka setTexture
+            if (child instanceof THREE.Mesh) {
+                const Pmaterial = new THREE.MeshBasicMaterial({ map: ambientOcclusionTexture });
+                child.material = Pmaterial;
+                //         // child.material.color.set('gray')
+            }
+        });
+
+        pants.push(obj)
+    }
+);
+pantObjLoader.load(
+    "pant.obj",
+    function (obj) {
+        // var model = obj.scene;
+        obj.position.setX(0)
+        obj.position.setY(0.50635)
+        obj.position.setZ(0)
+
+        obj.scale.setX(0.0166)
+        obj.scale.setY(0.006)
+        obj.scale.setZ(0.0253)
+
+        // obj.scale.setZ()
+        // obj.scale.setY(0.01)
+        // obj.scale.setX(0.01)
+        obj.traverse(function (child) {   // aka setTexture
+            if (child instanceof THREE.Mesh) {
+                const Pmaterial = new THREE.MeshBasicMaterial({ map: heightTexture });
+                child.material = Pmaterial;
+                //         // child.material.color.set('gray')
+            }
+        });
+
+        pants.push(obj)
+    }
+);
+pantObjLoader.load(
+    "pant.obj",
+    function (obj) {
+        // var model = obj.scene;
+        obj.position.setX(0)
+        obj.position.setY(0.50635)
+        obj.position.setZ(0)
+
+        obj.scale.setX(0.0166)
+        obj.scale.setY(0.006)
+        obj.scale.setZ(0.0253)
+
+        // obj.scale.setZ()
+        // obj.scale.setY(0.01)
+        // obj.scale.setX(0.01)
+        obj.traverse(function (child) {   // aka setTexture
+            if (child instanceof THREE.Mesh) {
+                const Pmaterial = new THREE.MeshBasicMaterial({ map: check22 });
+                child.material = Pmaterial;
+                //         // child.material.color.set('gray')
+            }
+        });
+
+        pants.push(obj)
+    }
+);
+pantObjLoader.load(
+    "pant.obj",
+    function (obj) {
+        // var model = obj.scene;
+        obj.position.setX(0)
+        obj.position.setY(0.50635)
+        obj.position.setZ(0)
+
+        obj.scale.setX(0.0166)
+        obj.scale.setY(0.006)
+        obj.scale.setZ(0.0253)
+
+        // obj.scale.setZ()
+        // obj.scale.setY(0.01)
+        // obj.scale.setX(0.01)
+        obj.traverse(function (child) {   // aka setTexture
+            if (child instanceof THREE.Mesh) {
+                const Pmaterial = new THREE.MeshBasicMaterial({ map: normalTexture });
+                child.material = Pmaterial;
+                //         // child.material.color.set('gray')
+            }
+        });
+
+        pants.push(obj)
+    }
+);
+pantObjLoader.load(
+    "pant.obj",
+    function (obj) {
+        // var model = obj.scene;
+        obj.position.setX(0)
+        obj.position.setY(0.50635)
+        obj.position.setZ(0)
+
+        obj.scale.setX(0.0166)
+        obj.scale.setY(0.006)
+        obj.scale.setZ(0.0253)
+
+        // obj.scale.setZ()
+        // obj.scale.setY(0.01)
+        // obj.scale.setX(0.01)
+        obj.traverse(function (child) {   // aka setTexture
+            if (child instanceof THREE.Mesh) {
+                const Pmaterial = new THREE.MeshBasicMaterial({ map: alphaTexture });
+                child.material = Pmaterial;
+                //         // child.material.color.set('gray')
+            }
+        });
+
+        pants.push(obj)
+    }
+);
+pantObjLoader.load(
+    "pant.obj",
+    function (obj) {
+        // var model = obj.scene;
+        obj.position.setX(0)
+        obj.position.setY(0.50635)
+        obj.position.setZ(0)
+
+        obj.scale.setX(0.0166)
+        obj.scale.setY(0.006)
+        obj.scale.setZ(0.0253)
+
+        // obj.scale.setZ()
+        // obj.scale.setY(0.01)
+        // obj.scale.setX(0.01)
+        obj.traverse(function (child) {   // aka setTexture
+            if (child instanceof THREE.Mesh) {
+                const Pmaterial = new THREE.MeshBasicMaterial({ map: colorTexture });
+                child.material = Pmaterial;
+                //         // child.material.color.set('gray')
+            }
+        });
+
+        pants.push(obj)
+    }
+);
+pantObjLoader.load(
+    "pant.obj",
+    function (obj) {
+        // var model = obj.scene;
+        obj.position.setX(0)
+        obj.position.setY(0.50635)
+        obj.position.setZ(0)
+
+        obj.scale.setX(0.0166)
+        obj.scale.setY(0.006)
+        obj.scale.setZ(0.0253)
+
+
+        // obj.scale.setZ()
+        // obj.scale.setY(0.01)
+        // obj.scale.setX(0.01)
+        obj.traverse(function (child) {   // aka setTexture
+            if (child instanceof THREE.Mesh) {
+                const Pmaterial = new THREE.MeshBasicMaterial({ map: roughnessTexture });
+                child.material = Pmaterial;
+                //         // child.material.color.set('gray')
+            }
+        });
+
+        pants.push(obj)
+    }
+);
+pantObjLoader.load(
+    "pant.obj",
+    function (obj) {
+        // var model = obj.scene;
+        obj.position.setX(0)
+        obj.position.setY(0.50635)
+        obj.position.setZ(0)
+
+        obj.scale.setX(0.0166)
+        obj.scale.setY(0.006)
+        obj.scale.setZ(0.0253)
+
+        // obj.scale.setZ()
+        // obj.scale.setY(0.01)
+        // obj.scale.setX(0.01)
+        obj.traverse(function (child) {   // aka setTexture
+            if (child instanceof THREE.Mesh) {
+                const Pmaterial = new THREE.MeshBasicMaterial({ map: skinTexture });
+                child.material = Pmaterial;
+                //         // child.material.color.set('gray')
             }
         });
 

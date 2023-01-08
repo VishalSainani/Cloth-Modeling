@@ -12,6 +12,7 @@ import {
 
 import { pants } from './pant_preprocessing.js'
 import { clothes } from './shirt_Processing'
+import { femaleClothes } from './female_modeling'
 /**
  * Base
  */
@@ -20,7 +21,8 @@ const gui = new dat.GUI()
 var index = {
     value: 0,
     name: '',
-    pantValue: 0
+    pantValue: 0,
+    femaleValue: 0,
 }
 
 // Canvas
@@ -45,70 +47,7 @@ gltfLoader.setDRACOLoader(dracoLoader)
 
 var mesh;
 let mixer = null
-// Model loading
 
-objLoader.load(
-    "/models/t_shirt/FullShirt.obj",
-    (object) => {
-        object.position.setX(-0.78)
-        object.position.setY(1.65)
-        object.position.setZ(-10.490)
-
-        object.scale.setX(-0.1873)
-        object.scale.setY(0.0728)
-        object.scale.setZ(0.0253)
-        // Add the loaded object to the scene
-        var positionX = gui.add(object.position, "x", -112, 112, 0.01).name("shirt x1 position")
-        var positionY = gui.add(object.position, "y", -112, 112, 0.01).name("shirt y1 position")
-        var positionZ = gui.add(object.position, "z", -112, 112, 0.01).name("shirt z1 position")
-
-        var scaleX = gui.add(object.scale, "x", -2, 2, 0.0001).name("shirt x1 Cloth set")
-        var scaleY = gui.add(object.scale, "y", -2, 2, 0.0001).name("shirt y1 Cloth set")
-        var scaleZ = gui.add(object.scale, "z", -2, 2, 0.0001).name("shirt z1 Cloth set")
-
-        scene.add(object);
-    },
-    (progress) => {
-        // This function is called while the model is loading
-        console.log(`Loading model: ${(progress.loaded / progress.total * 100)}%`);
-    },
-    (error) => {
-        // This function is called if an error occurs while loading the model
-        console.error(error);
-    }
-);
-
-
-objLoader.load(
-    "/models/female_cloth/female_dress.obj",
-    (object) => {
-        // object.position.setX(-0.78)
-        // object.position.setY(1.65)
-        // object.position.setZ(-10.490)
-
-        // object.scale.setX(-0.1873)
-        // object.scale.setY(0.0728)
-        // object.scale.setZ(0.0253)
-        // Add the loaded object to the scene
-        var positionX = gui.add(object.position, "x", -2, 2, 0.0001).name("female shirt x1 position")
-        var positionY = gui.add(object.position, "y", -2, 2, 0.0001).name("female shirt y1 position")
-        var positionZ = gui.add(object.position, "z", -2, 2, 0.0001).name("female shirt z1 position")
-
-        var scaleX = gui.add(object.scale, "x", -2, 2, 0.0001).name("female shirt x1 Cloth set")
-        var scaleY = gui.add(object.scale, "y", -2, 2, 0.0001).name("female shirt y1 Cloth set")
-        var scaleZ = gui.add(object.scale, "z", -2, 2, 0.0001).name("female shirt z1 Cloth set")
-
-        scene.add(object);
-    },
-    (progress) => {
-        // This function is called while the model is loading
-        console.log(`Loading model: ${(progress.loaded / progress.total * 100)}%`);
-    },
-    (error) => {
-        // This function is called if an error occurs while loading the model
-        console.error(error);
-    }
-);
 // Model loading
 
 gltfLoader.load(
@@ -116,6 +55,15 @@ gltfLoader.load(
     (gltf) => {
         var model = gltf.scene;
         // model.scale.setZ(1.3)
+
+        model.position.setX(0.0295)
+        model.position.setY(0.0728)
+        model.position.setZ(-0.0572)
+
+        model.scale.setX(1.1566)
+        model.scale.setY(1)
+        model.scale.setZ(1.937)
+
         model.traverse((o) => {
             if (o.isMesh) {
                 // note: for a multi-material mesh, `o.material` may be an array,
@@ -125,20 +73,19 @@ gltfLoader.load(
         });
         clothes.push(model)
         console.log(clothes.length);
-        // console.log(index.value)
-        // console.log(model.scale.x);
 
         var FizzyText = function () {
             this.slider = 0;
-            //this.slider2 = 0;
+            this.female = 0;
         };
         var FizzyText1 = function () {
             this.sliderPant = 0;
-            //this.slider2 = 0;
         };
 
         var text = new FizzyText()
-        var slider = gui.add(text, 'slider', 0, 10, 1).listen();
+        var slider = gui.add(text, 'slider', 0, 20, 1).listen();
+        var femaleClothesSlider = gui.add(text, 'female', 0, 8, 1).listen();
+
         var text2 = new FizzyText1()
         var sliderPant = gui.add(text2, 'sliderPant', 0, 21, 1).listen();
 
@@ -158,13 +105,6 @@ gltfLoader.load(
         var largeButtonShirt = gui.add(largeShirt, 'large');
         var extraLargeButtonShirt = gui.add(extraLargeShirt, 'extraLarge');
 
-        clothes[0].position.setX(0.0295)
-        clothes[0].position.setY(0.0728)
-        clothes[0].position.setZ(-0.0572)
-
-        clothes[0].scale.setX(1.1566)
-        clothes[0].scale.setY(1)
-        clothes[0].scale.setZ(1.937)
 
         scene.add(clothes[0])
 
@@ -186,14 +126,6 @@ gltfLoader.load(
         var largeButtonPant = gui.add(largePant, 'large');
         var extraLargeButtonPant = gui.add(extraLargePant, 'extraLarge');
 
-        pants[0].position.setX(0)
-        pants[0].position.setY(0)
-        pants[0].position.setZ(0)
-
-        pants[0].scale.setX(0.0166)
-        pants[0].scale.setY(0.0123)
-        pants[0].scale.setZ(0.0253)
-
         scene.add(pants[0])
 
         pantPositionX = gui.add(pants[0].position, "x", -2, 2, 0.00001).name("pant x position")
@@ -206,6 +138,7 @@ gltfLoader.load(
 
         slider.onChange(function (value) {
             scene.remove(clothes[index.value])
+            console.log("clothes.length", clothes.length);
 
             index.value = value // this doesn't work
             // Size setting for all shirts
@@ -220,14 +153,6 @@ gltfLoader.load(
             scaleZ.remove()
             scaleY.remove()
             scaleX.remove()
-
-            clothes[index.value].position.setX(0.0295)
-            clothes[index.value].position.setY(0.0728)
-            clothes[index.value].position.setZ(-0.0572)
-
-            clothes[index.value].scale.setX(1.1566)
-            clothes[index.value].scale.setY(1)
-            clothes[index.value].scale.setZ(1.937)
 
             scene.add(clothes[index.value])
 
@@ -283,14 +208,6 @@ gltfLoader.load(
             largeButtonPant = gui.add(largePant, 'large');
             extraLargeButtonPant = gui.add(extraLargePant, 'extraLarge');
 
-            // pants[index.pantValue].position.setX(0)
-            // pants[index.pantValue].position.setY(0)
-            // pants[index.pantValue].position.setZ(0)
-
-            // pants[index.pantValue].scale.setX(0.0166)
-            // pants[index.pantValue].scale.setY(0.0123)
-            // pants[index.pantValue].scale.setZ(0.0253)
-
             scene.add(pants[index.pantValue])
 
             pantPositionX = gui.add(pants[index.pantValue].position, "x", -2, 2, 0.00001).name("pant x position")
@@ -303,7 +220,19 @@ gltfLoader.load(
 
         });
 
+        femaleClothesSlider.onChange(function (value) {
+            index.femaleValue = value
+            // var pantPositionX = gui.add(femaleClothes[index.femaleValue].position, "x", -2, 2, 0.00001).name("pant x position")
+            // var pantPositionY = gui.add(femaleClothes[index.femaleValue].position, "y", -2, 2, 0.00001).name("pant y position")
+            // var pantPositionZ = gui.add(femaleClothes[index.femaleValue].position, "z", -2, 2, 0.00001).name("pant z position")
 
+            // var pantScaleX = gui.add(femaleClothes[index.femaleValue].scale, "x", -0.1, 0.1, 0.0001).name("pant x Cloth set")
+            // var pantScaleY = gui.add(femaleClothes[index.femaleValue].scale, "y", -0.1, 0.1, 0.0001).name("pant y Cloth set")
+            // var pantScaleZ = gui.add(femaleClothes[index.femaleValue].scale, "z", -0.1, 0.1, 0.0001).name("pant z Cloth set")
+
+            scene.add(femaleClothes[index.femaleValue])
+
+        });
 
     }
 )

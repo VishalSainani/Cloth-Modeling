@@ -32,6 +32,18 @@ const metalnessTexture = textureLoader.load('/textures/door/metalness.jpg')
 const roughnessTexture = textureLoader.load('/textures/door/roughness.jpg')
 const colorTexture = textureLoader.load('/textures/door/color.jpg')
 const skinTexture = textureLoader.load('/textures/skin.jpg')
+// Female CLoth textures
+const femaleTexture1 = textureLoader.load('/textures/female/a1.png')
+const femaleTexture2 = textureLoader.load('/textures/female/a2.png')
+const femaleTexture3 = textureLoader.load('/textures/female/a3.png')
+const femaleTexture4 = textureLoader.load('/textures/female/a4.png')
+const femaleTexture5 = textureLoader.load('/textures/female/a5.png')
+const femaleTexture6 = textureLoader.load('/textures/female/a6.png')
+const femaleTexture7 = textureLoader.load('/textures/female/a7.png')
+const femaleTexture8 = textureLoader.load('/textures/female/a8.png')
+const femaleTexture9 = textureLoader.load('/textures/female/a9.png')
+
+
 
 //  const vishalTexture = textureLoader.load(
 //     minecraft
@@ -141,5 +153,14 @@ export {
     metalnessTexture,
     roughnessTexture,
     colorTexture,
-    skinTexture
+    skinTexture,
+    femaleTexture1,
+    femaleTexture2,
+    femaleTexture3,
+    femaleTexture4,
+    femaleTexture5,
+    femaleTexture6,
+    femaleTexture7,
+    femaleTexture8,
+    femaleTexture9,
 }

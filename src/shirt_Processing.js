@@ -28,6 +28,13 @@ gltfLoader.load(
     (gltf) => {
         var model = gltf.scene;
         model.scale.setZ(1.3)
+        model.position.setX(0.0295)
+        model.position.setY(0.0728)
+        model.position.setZ(-0.0572)
+
+        model.scale.setX(1.1566)
+        model.scale.setY(1)
+        model.scale.setZ(1.937)
         model.traverse((o) => {
             if (o.isMesh) {
                 // note: for a multi-material mesh, `o.material` may be an array,
@@ -45,6 +52,13 @@ gltfLoader.load(
     (gltf) => {
         var model = gltf.scene;
         model.scale.setZ(1.3)
+        model.position.setX(0.0295)
+        model.position.setY(0.0728)
+        model.position.setZ(-0.0572)
+
+        model.scale.setX(1.1566)
+        model.scale.setY(1)
+        model.scale.setZ(1.937)
         model.traverse((o) => {
             if (o.isMesh) {
                 // note: for a multi-material mesh, `o.material` may be an array,
@@ -62,6 +76,13 @@ gltfLoader.load(
     (gltf) => {
         var model = gltf.scene;
         model.scale.setZ(1.3)
+        model.position.setX(0.0295)
+        model.position.setY(0.0728)
+        model.position.setZ(-0.0572)
+
+        model.scale.setX(1.1566)
+        model.scale.setY(1)
+        model.scale.setZ(1.937)
         model.traverse((o) => {
             if (o.isMesh) {
                 // note: for a multi-material mesh, `o.material` may be an array,
@@ -80,6 +101,13 @@ gltfLoader.load(
     (gltf) => {
         var model = gltf.scene;
         model.scale.setZ(1.3)
+        model.position.setX(0.0295)
+        model.position.setY(0.0728)
+        model.position.setZ(-0.0572)
+
+        model.scale.setX(1.1566)
+        model.scale.setY(1)
+        model.scale.setZ(1.937)
         model.traverse((o) => {
             if (o.isMesh) {
                 // note: for a multi-material mesh, `o.material` may be an array,
@@ -98,6 +126,13 @@ gltfLoader.load(
     (gltf) => {
         var model = gltf.scene;
         model.scale.setZ(1.3)
+        model.position.setX(0.0295)
+        model.position.setY(0.0728)
+        model.position.setZ(-0.0572)
+
+        model.scale.setX(1.1566)
+        model.scale.setY(1)
+        model.scale.setZ(1.937)
         model.traverse((o) => {
             if (o.isMesh) {
                 // note: for a multi-material mesh, `o.material` may be an array,
@@ -116,6 +151,13 @@ gltfLoader.load(
     (gltf) => {
         var model = gltf.scene;
         model.scale.setZ(1.3)
+        model.position.setX(0.0295)
+        model.position.setY(0.0728)
+        model.position.setZ(-0.0572)
+
+        model.scale.setX(1.1566)
+        model.scale.setY(1)
+        model.scale.setZ(1.937)
         model.traverse((o) => {
             if (o.isMesh) {
                 // note: for a multi-material mesh, `o.material` may be an array,
@@ -134,6 +176,14 @@ gltfLoader.load(
     (gltf) => {
         var model = gltf.scene;
         model.scale.setZ(1.3)
+        model.scale.setZ(1.3)
+        model.position.setX(0.0295)
+        model.position.setY(0.0728)
+        model.position.setZ(-0.0572)
+
+        model.scale.setX(1.1566)
+        model.scale.setY(1)
+        model.scale.setZ(1.937)
         model.traverse((o) => {
             if (o.isMesh) {
                 // note: for a multi-material mesh, `o.material` may be an array,
@@ -153,6 +203,13 @@ gltfLoader.load(
     (gltf) => {
         var model = gltf.scene;
         model.scale.setZ(1.3)
+        model.position.setX(0.0295)
+        model.position.setY(0.0728)
+        model.position.setZ(-0.0572)
+
+        model.scale.setX(1.1566)
+        model.scale.setY(1)
+        model.scale.setZ(1.937)
         model.traverse((o) => {
             if (o.isMesh) {
                 // note: for a multi-material mesh, `o.material` may be an array,
@@ -171,6 +228,13 @@ gltfLoader.load(
     (gltf) => {
         var model = gltf.scene;
         model.scale.setZ(1.3)
+        model.position.setX(0.0295)
+        model.position.setY(0.0728)
+        model.position.setZ(-0.0572)
+
+        model.scale.setX(1.1566)
+        model.scale.setY(1)
+        model.scale.setZ(1.937)
         model.traverse((o) => {
             if (o.isMesh) {
                 // note: for a multi-material mesh, `o.material` may be an array,
@@ -183,28 +247,297 @@ gltfLoader.load(
     }
 )
 
-// shirtObjLoader.load(
-//     "FullShirt.obj",
-//     function (obj) {
-//         obj.position.setX(0)
-//         obj.position.setY(0)
-//         obj.position.setZ(0)
+// Model loading
 
-//         obj.scale.setX(0.0166)
-//         obj.scale.setY(0.0123)
-//         obj.scale.setZ(0.0253)
+gltfLoader.load(
+    '/models/t_shirt/scene.gltf',
+    (gltf) => {
+        var model = gltf.scene;
+        // model.scale.setZ(1.3)
 
-//         obj.traverse(function (child) {   // aka setTexture
-//             if (child instanceof THREE.Mesh) {
-//                 const Pmaterial = new THREE.MeshBasicMaterial({ map: minecraft });
-//                 child.material = Pmaterial;
-//                 //         // child.material.color.set('gray')
-//             }
-//         });
-//         // scene.add(obj)
-//         clothes.push(obj)
-//     }
-// );
+        model.position.setX(0.0295)
+        model.position.setY(0.0728)
+        model.position.setZ(-0.0572)
+
+        model.scale.setX(1.1566)
+        model.scale.setY(1)
+        model.scale.setZ(1.937)
+
+        model.traverse((o) => {
+            if (o.isMesh) {
+                // note: for a multi-material mesh, `o.material` may be an array,
+                // in which case you'd need to set `.map` on each value.
+                o.material.map = minecraft;
+            }
+        });
+        clothes.push(model)
+        console.log(clothes.length);
+        // console.log(index.value)
+        // console.log(model.scale.x);
+
+
+    }
+)
+
+
+shirtObjLoader.setPath('/models/t_shirt/')
+
+
+shirtObjLoader.load(
+    "FullShirt.obj",
+    (object) => {
+        object.position.setX(0.02)
+        object.position.setY(-0.08)
+        object.position.setZ(-0.06)
+
+        object.scale.setX(1.5)
+        object.scale.setY(0.99)
+        object.scale.setZ(1.7)
+        object.traverse(function (child) {   // aka setTexture
+            if (child instanceof THREE.Mesh) {
+                const Pmaterial = new THREE.MeshBasicMaterial({ map: check10 });
+                child.material = Pmaterial;
+                //         // child.material.color.set('gray')
+            }
+        });
+        // Add the loaded object to the scene
+
+        clothes.push(object);
+    },
+
+);
+shirtObjLoader.load(
+    "FullShirt.obj",
+    (object) => {
+        object.position.setX(0.02)
+        object.position.setY(-0.08)
+        object.position.setZ(-0.06)
+
+        object.scale.setX(1.5)
+        object.scale.setY(0.99)
+        object.scale.setZ(1.7)
+        object.traverse(function (child) {   // aka setTexture
+            if (child instanceof THREE.Mesh) {
+                const Pmaterial = new THREE.MeshBasicMaterial({ map: check22 });
+                child.material = Pmaterial;
+                //         // child.material.color.set('gray')
+            }
+        });
+        // Add the loaded object to the scene
+
+        clothes.push(object);
+    },
+
+);
+shirtObjLoader.load(
+    "FullShirt.obj",
+    (object) => {
+        object.position.setX(0.02)
+        object.position.setY(-0.08)
+        object.position.setZ(-0.06)
+
+        object.scale.setX(1.5)
+        object.scale.setY(0.99)
+        object.scale.setZ(1.7)
+        object.traverse(function (child) {   // aka setTexture
+            if (child instanceof THREE.Mesh) {
+                const Pmaterial = new THREE.MeshBasicMaterial({ map: minecraft });
+                child.material = Pmaterial;
+                //         // child.material.color.set('gray')
+            }
+        });
+        // Add the loaded object to the scene
+
+        clothes.push(object);
+    },
+
+);
+shirtObjLoader.load(
+    "FullShirt.obj",
+    (object) => {
+        object.position.setX(0.02)
+        object.position.setY(-0.08)
+        object.position.setZ(-0.06)
+
+        object.scale.setX(1.5)
+        object.scale.setY(0.99)
+        object.scale.setZ(1.7)
+        object.traverse(function (child) {   // aka setTexture
+            if (child instanceof THREE.Mesh) {
+                const Pmaterial = new THREE.MeshBasicMaterial({ map: alphaTexture });
+                child.material = Pmaterial;
+                //         // child.material.color.set('gray')
+            }
+        });
+        // Add the loaded object to the scene
+
+        clothes.push(object);
+    },
+
+);
+shirtObjLoader.load(
+    "FullShirt.obj",
+    (object) => {
+        object.position.setX(0.02)
+        object.position.setY(-0.08)
+        object.position.setZ(-0.06)
+
+        object.scale.setX(1.5)
+        object.scale.setY(0.99)
+        object.scale.setZ(1.7)
+        object.traverse(function (child) {   // aka setTexture
+            if (child instanceof THREE.Mesh) {
+                const Pmaterial = new THREE.MeshBasicMaterial({ map: heightTexture });
+                child.material = Pmaterial;
+                //         // child.material.color.set('gray')
+            }
+        });
+        // Add the loaded object to the scene
+
+        clothes.push(object);
+    },
+
+);
+shirtObjLoader.load(
+    "FullShirt.obj",
+    (object) => {
+        object.position.setX(0.02)
+        object.position.setY(-0.08)
+        object.position.setZ(-0.06)
+
+        object.scale.setX(1.5)
+        object.scale.setY(0.99)
+        object.scale.setZ(1.7)
+        object.traverse(function (child) {   // aka setTexture
+            if (child instanceof THREE.Mesh) {
+                const Pmaterial = new THREE.MeshBasicMaterial({ map: normalTexture });
+                child.material = Pmaterial;
+                //         // child.material.color.set('gray')
+            }
+        });
+        // Add the loaded object to the scene
+
+        clothes.push(object);
+    },
+
+);
+shirtObjLoader.load(
+    "FullShirt.obj",
+    (object) => {
+        object.position.setX(0.02)
+        object.position.setY(-0.08)
+        object.position.setZ(-0.06)
+
+        object.scale.setX(1.5)
+        object.scale.setY(0.99)
+        object.scale.setZ(1.7)
+        object.traverse(function (child) {   // aka setTexture
+            if (child instanceof THREE.Mesh) {
+                const Pmaterial = new THREE.MeshBasicMaterial({ map: ambientOcclusionTexture });
+                child.material = Pmaterial;
+                //         // child.material.color.set('gray')
+            }
+        });
+        // Add the loaded object to the scene
+
+        clothes.push(object);
+    },
+
+);
+
+shirtObjLoader.load(
+    "FullShirt.obj",
+    (object) => {
+        object.position.setX(0.02)
+        object.position.setY(-0.08)
+        object.position.setZ(-0.06)
+
+        object.scale.setX(1.5)
+        object.scale.setY(0.99)
+        object.scale.setZ(1.7)
+        object.traverse(function (child) {   // aka setTexture
+            if (child instanceof THREE.Mesh) {
+                const Pmaterial = new THREE.MeshBasicMaterial({ map: metalnessTexture });
+                child.material = Pmaterial;
+                //         // child.material.color.set('gray')
+            }
+        });
+        // Add the loaded object to the scene
+
+        clothes.push(object);
+    },
+
+);
+shirtObjLoader.load(
+    "FullShirt.obj",
+    (object) => {
+        object.position.setX(0.02)
+        object.position.setY(-0.08)
+        object.position.setZ(-0.06)
+
+        object.scale.setX(1.5)
+        object.scale.setY(0.99)
+        object.scale.setZ(1.7)
+        object.traverse(function (child) {   // aka setTexture
+            if (child instanceof THREE.Mesh) {
+                const Pmaterial = new THREE.MeshBasicMaterial({ map: roughnessTexture });
+                child.material = Pmaterial;
+                //         // child.material.color.set('gray')
+            }
+        });
+        // Add the loaded object to the scene
+
+        clothes.push(object);
+    },
+
+);
+shirtObjLoader.load(
+    "FullShirt.obj",
+    (object) => {
+        object.position.setX(0.02)
+        object.position.setY(-0.08)
+        object.position.setZ(-0.06)
+
+        object.scale.setX(1.5)
+        object.scale.setY(0.99)
+        object.scale.setZ(1.7)
+        object.traverse(function (child) {   // aka setTexture
+            if (child instanceof THREE.Mesh) {
+                const Pmaterial = new THREE.MeshBasicMaterial({ map: colorTexture });
+                child.material = Pmaterial;
+                //         // child.material.color.set('gray')
+            }
+        });
+        // Add the loaded object to the scene
+
+        clothes.push(object);
+    },
+
+);
+shirtObjLoader.load(
+    "FullShirt.obj",
+    (object) => {
+        object.position.setX(0.02)
+        object.position.setY(-0.08)
+        object.position.setZ(-0.06)
+
+        object.scale.setX(1.5)
+        object.scale.setY(0.99)
+        object.scale.setZ(1.7)
+        object.traverse(function (child) {   // aka setTexture
+            if (child instanceof THREE.Mesh) {
+                const Pmaterial = new THREE.MeshBasicMaterial({ map: skinTexture });
+                child.material = Pmaterial;
+                //         // child.material.color.set('gray')
+            }
+        });
+        // Add the loaded object to the scene
+
+        clothes.push(object);
+    },
+
+);
+
 export {
     clothes
 }
